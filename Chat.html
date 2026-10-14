@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detect Escape Key</title>
-    <script>
-        // JavaScript to detect Escape key
-        document.addEventListener('keyup', function(event) {
-            if (event.key === 'Escape' || event.keyCode === 27) {
-                console.log('Escape key was pressed!');
-                // Perform any additional action here
-                alert('Escape key detected!');
-            }
-        });
-    </script>
-</head>
-<body>
-    <h1>Press the Escape Key</h1>
-    <p>Try pressing the Escape key and see what happens!</p>
-</body>
+<html>
+    <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DWA000004wlc9',
+				'Agentforce_NB',
+				'https://cmfgroup--uat.sandbox.my.site.com/ESWAgentforceNB1792002449639',
+				{
+					scrt2URL: 'https://cmfgroup--uat.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://cmfgroup--uat.sandbox.my.site.com/ESWAgentforceNB1792002449639/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </html>
